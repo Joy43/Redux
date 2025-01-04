@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Tasks() {
   return (
-    <div>Tasks</div>
+    <div> welcome to Tasks</div>
   )
 }
