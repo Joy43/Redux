@@ -1,11 +1,14 @@
-import { Task } from "@/types";
+import { RootState } from "@/redux/store";
+import { ITask } from "@/types";
+
 import { createSlice } from "@reduxjs/toolkit";
+
 // -----like as schema of the state--------
 interface InitialState{
-    task:Task[]
+    tasks:ITask[]
 }
 const initialState:InitialState={
-    task:[
+    tasks:[
         {
             id:"asdfesdfasef",
             title:"Learn Redux",
@@ -37,6 +40,10 @@ const initialState:InitialState={
     initialState,
     reducers:{
         
-    }
-})
+    },
+
+});
+export const selectTask=(state:RootState)=>{
+    return state.todo. tasks;
+}
 export default taskSlice.reducer;
