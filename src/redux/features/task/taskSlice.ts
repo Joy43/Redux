@@ -43,6 +43,16 @@ const initialState:InitialState={
     },
 
 });
+
+toggleCompleteState:(state,action:PayloadAction<string>)=>{
+    console.log(action.payload);
+    state.tasks.forEach((task)=>{
+        task.id===action.payload?(task.isCompleted=!task.isCompleted):null;
+    })
+};
+updateFilter:(state,action:PayloadAction<string>)=>{
+    state.filter=action.payload;
+}
 export const selectTask=(state:RootState)=>{
     return state.todo. tasks;
 }
